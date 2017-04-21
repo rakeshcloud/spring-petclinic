@@ -62,12 +62,12 @@
 	 <repository>
          <id>deployment</id>
          
-         <url>http://192.168.33.37:8081/nexus/content/repositories/releases/</url>
+         <url>http://192.168.1.104:8081/nexus/content/repositories/releases/</url>
       </repository>
 	  <repository>
          <id>deployments</id>
          
-         <url>http://192.168.33.37:8081/nexus/content/repositories/snapshots/</url>
+         <url>http://192.168.1.104:8081/nexus/content/repositories/snapshots/</url>
 		 <snapshots>
 		 <enabled>true</enabled>
 		 </snapshots>
@@ -80,12 +80,12 @@
       <repository>
          <id>deployment</id>
          <name>Internal Releases</name>
-         <url>http://192.168.33.37:8081/nexus/content/repositories/releases/</url>
+         <url>http://192.168.1.104:8081/nexus/content/repositories/releases/</url>
       </repository>
       <snapshotRepository>
          <id>deployment</id>
          <name>Internal Snapshot Releases</name>
-         <url>http://192.168.33.37:8081/nexus/content/repositories/snapshots/</url>
+         <url>http://192.168.1.104:8081/nexus/content/repositories/snapshots/</url>
       </snapshotRepository>
     </distributionManagement>
 
@@ -144,7 +144,7 @@
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework</groupId>
-                    <artifactId>spring-context</artifactId>
+                    <artifactId>*</artifactId>
                 </exclusion>
                 <!--  because Spring Data usually comes with a slightly older version of Spring -->
             </exclusions>
@@ -279,7 +279,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>4.15-SNAPSHOT</version>
             <scope>test</scope>
  </dependency>
         <dependency>
